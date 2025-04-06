@@ -24,7 +24,7 @@ this is bootstrapped alternative to github ticketing / jira board
      - llama.cpp is not best model, but runs locally and is free
    - HuggingFace integration?
 
-3. VSCode extension using `python gittercommitter.py (--staged)` CLI command
+3. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
 
    - need to figure out how to write VSCode extension
      - this will be in Node.js probably
@@ -34,7 +34,7 @@ this is bootstrapped alternative to github ticketing / jira board
 
 4. CLI tool command aesthetics
 
-   - currently, command is a fake CLI command: `python gittercommitter.py (--staged)`
+   - currently, command is a fake CLI command: `python src/gittercommitter.py (--staged)`
      - wrapper `click` interface over python script
    - want to beautify this as a real CLI command `gcpc` (gitter committer pre commit)
      - possibly make multiple CLI commands

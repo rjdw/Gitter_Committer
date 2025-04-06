@@ -66,7 +66,7 @@ this means we are private - no company security risk. We can run on no internet.
 6. If using OpenAI API, go make an API key online
    - set the API key, `export OPENAI_API_KEY=your-key-here`
    - or use an .env file
-7. Run code with `python gittercommitter.py (--staged)`
+7. Run code with `python src/gittercommitter.py (--staged)`
 
 ## Trying to beat
 
