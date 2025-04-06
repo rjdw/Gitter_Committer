@@ -43,6 +43,7 @@ this is bootstrapped alternative to github ticketing / jira board
        - etc
 
 5. Figure out external installation format
+
    - how will users install this program? options include:
      - `pip install` : making this a pip package
        - python only
@@ -50,3 +51,8 @@ this is bootstrapped alternative to github ticketing / jira board
      - download from our website
      - installation of VSCode extension from VSCode store
    - Need to figure out installation on the VSCode extensions and on the CLI tools side
+
+6. LLM evaluation
+   - Need metrics for LLMs output evaluation
+   - If we are actually doing good job with the output or not.
+     - need metrics + feedback / debugging / monitoring for models
