@@ -32,6 +32,7 @@ this is bootstrapped alternative to github ticketing / jira board
      - llama.cpp is not best model, but runs locally and is free
    - HuggingFace integration?
    - LangChain integration
+   - Groq free online inference API
 
 1. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
 
