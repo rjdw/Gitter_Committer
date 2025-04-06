@@ -2,6 +2,9 @@
 
 ## Table of Contents
 
+[TODO List](TODO.md)  
+please update with ideas / tickets
+
 1. [Idea](#idea)
 2. [Features](#features)
 3. [Description](#description)
