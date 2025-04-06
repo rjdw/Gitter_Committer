@@ -7,6 +7,14 @@ this is bootstrapped alternative to github ticketing / jira board
 
 ## TODO List
 
+### High Priority
+
+1. High Priority Tickets Here
+
+### General
+
+1. Add functionality for pull update summary.
+
 1. Retrieval of files for context in prompting template
 
    - currently only using `basic_PR_template.txt` for prompting
@@ -16,15 +24,16 @@ this is bootstrapped alternative to github ticketing / jira board
      - need to retrieve info on the whole file for all files modified
    - Must figure out how to structure this retrieval
 
-2. Optimize local LLM execution for different SoTA models
+1. Optimize local LLM execution for different SoTA models
 
    - Downloading and connecting DeepSeek
      - https://www.youtube.com/watch?v=72Ef65B65JA
    - first attempted openAI API (did not want to pay), changed to llama.cpp
      - llama.cpp is not best model, but runs locally and is free
    - HuggingFace integration?
+   - LangChain integration
 
-3. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
+1. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
 
    - need to figure out how to write VSCode extension
      - this will be in Node.js probably
@@ -32,7 +41,7 @@ this is bootstrapped alternative to github ticketing / jira board
      1. VSCode hosts CLI tool as subprocess (easy to code)
      2. VSCode POST for CLI local server (harder to code, but maybe migrate to because more room for future dev)
 
-4. CLI tool command aesthetics
+1. CLI tool command aesthetics
 
    - currently, command is a fake CLI command: `python src/gittercommitter.py (--staged)`
      - wrapper `click` interface over python script
@@ -42,7 +51,7 @@ this is bootstrapped alternative to github ticketing / jira board
        - `gcpull` for merge notes (feature 2 in README)
        - etc
 
-5. Figure out external installation format
+1. Figure out external installation format
 
    - how will users install this program? options include:
      - `pip install` : making this a pip package
@@ -52,7 +61,7 @@ this is bootstrapped alternative to github ticketing / jira board
      - installation of VSCode extension from VSCode store
    - Need to figure out installation on the VSCode extensions and on the CLI tools side
 
-6. LLM evaluation
+1. LLM evaluation
    - Need metrics for LLMs output evaluation
    - If we are actually doing good job with the output or not.
      - need metrics + feedback / debugging / monitoring for models
