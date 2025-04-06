@@ -4,7 +4,7 @@ from string import Template
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def load_prompt_template(path="prompts/summary.txt"):
+def load_prompt_template(path="../prompts/summary.txt"):
     with open(path, "r") as f:
         return Template(f.read())
 
@@ -12,6 +12,7 @@ def summarize_diff(diff_text):
     template = load_prompt_template()
     filled_prompt = template.substitute(git_diff=diff_text)
 
+    # don't run this shit - take it out and add llama for free
     response = openai.ChatCompletion.create(
         model="gpt-4-turbo",
         messages=[
