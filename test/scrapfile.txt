@@ -1,1 +1,18 @@
 # File used to mess around with pushing/pulling for Feature 2
+
+## What terminal looks like 
+
+$ git pull origin master
+From https://github.com/rjdw/Gitter_Committer
+ * branch            master     -> FETCH_HEAD
+Updating ff56766..fe35bb8
+Fast-forward
+ src/test/scrapfile.txt | 1 +
+ test/scrapfile.txt     | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 src/test/scrapfile.txt
+ create mode 100644 test/scrapfile.txt
+
+ ## Useful commands
+
+git diff HEAD@{1} HEAD: This compares your current HEAD (after the pull) with the previous HEAD (before the pull).
