@@ -1,5 +1,6 @@
 # File used to mess around with pushing/pulling for feature2
 
+<<<<<<< HEAD
 adfajfejfjfefeadsa
 
 ## What terminal looks like 
@@ -18,3 +19,6 @@ Fast-forward
  ## Useful commands
 
 git diff HEAD@{1} HEAD: This compares your current HEAD (after the pull) with the previous HEAD (before the pull).
+=======
+adfajfejfjfefeaad
+>>>>>>> ad628a39b0b44f0009cf1474a3f303f047bd8cec
