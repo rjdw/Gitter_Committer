@@ -23,6 +23,13 @@ Fast-forward
  create mode 100644 src/test/scrapfile.txt
  create mode 100644 test/scrapfile.txt
 
+$ git pull origin testing-pull-request 
+From https://github.com/rjdw/Gitter_Committer
+ * branch            testing-pull-request -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ test/scrapfile.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
 ### Merge Conflicts
 $ git pull origin testing-pull-request 
 From https://github.com/rjdw/Gitter_Committer
