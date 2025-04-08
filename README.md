@@ -5,11 +5,16 @@
 [TODO List](TODO.md)  
 please update with ideas / tickets
 
-1. [Idea](#idea)
-2. [Features](#features)
-3. [Description](#description)
-4. [Dev Setup](#setup)
-5. [Trying to beat](#trying-to-beat)
+- [Gitter Commiter](#gitter-commiter)
+  - [Table of Contents](#table-of-contents)
+  - [Idea](#idea)
+  - [Features](#features)
+  - [Description](#description)
+    - [Feature 1](#feature-1)
+    - [Feature 2](#feature-2)
+    - [Feature 3](#feature-3)
+  - [Setup](#setup)
+  - [Trying to beat](#trying-to-beat)
 
 ## Idea
 
@@ -70,6 +75,7 @@ this means we are private - no company security risk. We can run on no internet.
    - set the API key, `export OPENAI_API_KEY=your-key-here`
    - or use an .env file
 7. Run code with `python src/gittercommitter.py (--staged)`
+8. `pip install -e .` for editable mode installation of `gcpc` and other CLI tools for dev.
 
 ## Trying to beat
 
