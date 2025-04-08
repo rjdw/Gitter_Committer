@@ -1,14 +1,12 @@
 # Thinking outloud
 
 ## Current Task
-- How to get changes from pulled branch 
+- Get an LLM and make a wrapper for it
 
 ## Thought Process
-- User Git Pull
-- Changes from Github main branch 
-Usually when you pull you get the summary of the changes in terminal
-- What i need to do is get this summary, this info might be helpful to get the filenames of what changes, not sure it it shows u the lines changed directly. Testing out now
-
+- Browse models online, find free one
+- just try and get something to work: generate summary
+- Focus on finetuning later
 ## What terminal looks like 
 
 ### Normal 
@@ -42,4 +40,12 @@ Makes you fix merge conflicts first on the files directly
 
  ## Useful commands
 
-git diff HEAD@{1} HEAD: This compares your current HEAD (after the pull) with the previous HEAD (before the pull).
+git diff HEAD@{1} HEAD: This compares your current HEAD (after the pull) with the previous HEAD (before the pull).'
+
+## Results
+Just run git diff HEAD@{1} HEAD. I think we can just have a flag to be added to get_git_diff function
+
+## TODO
+- Write function to parse through git diff and get the function names
+- Make a Tree of important imports for changed files 
+- Test with more complex diffs. Its super generic. Prob prompt it better
