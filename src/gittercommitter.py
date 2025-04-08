@@ -1,6 +1,6 @@
 import click
 import subprocess
-from llm_interface import summarize_diff
+from llm_interface import summarize_diff, summarize_diff_gemini
 from diff_utils import get_git_diff
 
 @click.command()
@@ -11,9 +11,13 @@ def main(staged):
     if not diff_text.strip():
         print("No diff found.")
         return
+        
     print("Generating behavioral summary...\n")
     summary = summarize_diff(diff_text)
     print(summary)
 
+    # uncomment to run summary with gemini
+    summary_gemini = summarize_diff_gemini(diff_text)
+ 
 if __name__ == '__main__':
     main()
