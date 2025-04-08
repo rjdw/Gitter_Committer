@@ -1,2 +1,42 @@
+# Python virtual environments
 venv/
+.env/
+.venv/
+
+# Bytecode and cache
 __pycache__/
+*.py[cod]
+*.pyo
+
+# Egg and build artifacts
+*.egg-info/
+*.egg/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MacOS junk
+.DS_Store
+
+# VSCode / IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Log files
+*.log
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Generated CLI binaries (optional if you build wheels or dist)
+*.whl
+
+# Local environment overrides (optional)
+.envrc
