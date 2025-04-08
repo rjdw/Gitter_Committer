@@ -1,0 +1,29 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61"]
+
+[project]
+authors = [
+  {name = "rjdw"},
+  {name = "kevinle350"},
+]
+description = "LLM-powered Git commit and update analysis tool"
+name = "gittercommitter"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.0.1"
+
+dependencies = [
+  "click",
+  "gitpython", #   "llama-cpp-python", # llama  
+  "google-genai", # gemini
+  "openai", # gpt
+]
+
+[project.scripts]
+gcpc = "gittercommitter.gcpc:main"
+# gcupdate = "gittercommitter.gcupdate:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["gittercommitter"]
