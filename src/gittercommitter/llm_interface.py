@@ -3,14 +3,15 @@ import os
 from string import Template
 from google import genai
 from importlib.resources import files
+from dotenv import load_dotenv
 
 
+load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-# dont forget to remove keys when pushing
-GEMINI_API_KEY = "" # https://aistudio.google.com/apikey
+GEMINI_API_KEY = os.getenv("GENAI_API_KEY") # https://aistudio.google.com/apikey
 
-def load_prompt_template():
-    prompt_path = files("gittercommitter.prompts").joinpath("basic_PR_template.txt")
+def load_prompt_template(path = "basic_PR_template.txt"):
+    prompt_path = files("gittercommitter.prompts").joinpath(path)
     with prompt_path.open("r") as f:
         return Template(f.read())
 
@@ -30,7 +31,7 @@ def summarize_diff_openai(diff_text):
     return response['choices'][0]['message']['content']
 
 def summarize_diff_gemini(diff_text):
-    template = load_prompt_template()
+    template = load_prompt_template("pull_summary.txt")   
     filled_prompt = template.substitute(git_diff=diff_text)    
 
     client = genai.Client(api_key=GEMINI_API_KEY)

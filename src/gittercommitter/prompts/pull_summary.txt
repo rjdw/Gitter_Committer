@@ -1,0 +1,12 @@
+You are a senior software engineer helping a teammate understand code changes pulled from a remote branch.
+
+Below is a Git diff (HEAD@{1} vs HEAD) showing the code that was updated during the last pull.
+
+Summarize the **high-level intent** and **behavioral changes** introduced in this diff. Focus on what the code does differently now, and why it might have been changed. Mention any important logic, flow, or interface changes that could affect how the application runs or how other developers interact with it.
+
+Avoid unnecessary repetition of file paths or syntax details. The goal is to give a fast and useful understanding of the updated code for someone who hasn’t seen it before.
+
+
+```
+${git_diff}
+```
