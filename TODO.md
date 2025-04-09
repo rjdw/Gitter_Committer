@@ -17,8 +17,8 @@ this is bootstrapped alternative to github ticketing / jira board
 - [ ] 1. Add functionality for pull update summary.
 
   - [x] `git diff HEAD@{1} HEAD` functionality
-  - [ ] integrate functionality with `gcpull` CLI
-  - [ ] create `prompts/pull_summary.txt` template prompt for `gcpull` LLM call.
+  - [x] integrate functionality with `gcpull` CLI
+  - [x] create `prompts/pull_summary.txt` template prompt for `gcpull` LLM call.
 
 - [ ] 2. Retrieval of files for context in prompting template
 
@@ -28,6 +28,7 @@ this is bootstrapped alternative to github ticketing / jira board
     - [ ] `git diff` is not enough context for the input
     - [ ] need to retrieve info on the whole file for all files modified
   - [ ] Must figure out how to structure this retrieval
+    
 
 - [ ] 3. Optimize local LLM execution for different SoTA models
 
@@ -40,9 +41,9 @@ this is bootstrapped alternative to github ticketing / jira board
   - [ ] LangChain integration
   - [ ] Groq free online inference API
 
-- [ ] 4. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
+- [-] 4. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
 
-  - [ ] need to figure out how to write VSCode extension
+  - [] need to figure out how to write VSCode extension
     - [ ] this will be in Node.js probably
   - [ ] Two ways
     1.  VSCode hosts CLI tool as subprocess (easy to code)
@@ -76,3 +77,6 @@ this is bootstrapped alternative to github ticketing / jira board
    - [ ] Need metrics for LLMs output evaluation
    - [ ] If we are actually doing good job with the output or not.
      - [ ] need metrics + feedback / debugging / monitoring for models
+
+### Backlog
+- [ ] If diff too long, add file-by-file summaries
