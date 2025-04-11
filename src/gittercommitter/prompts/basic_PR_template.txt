@@ -5,3 +5,9 @@ Respond as if for a pull request summary and changelog. This response is for a p
 ```
 ${git_diff}
 ```
+
+File Contents Before and After:
+```
+${file_data_formatted}
+```
+
