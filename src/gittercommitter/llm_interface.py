@@ -8,8 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-# GEMINI_API_KEY = os.getenv("GENAI_API_KEY") # https://aistudio.google.com/apikey
-GEMINI_API_KEY = "AIzaSyDmCAnKpwqAEKh846E4epm55qWb2OfAy5c"
+GEMINI_API_KEY = os.getenv("GENAI_API_KEY") # https://aistudio.google.com/apikey
 
 def load_prompt_template(path = "basic_PR_template.txt"):
     prompt_path = files("gittercommitter.prompts").joinpath(path)
