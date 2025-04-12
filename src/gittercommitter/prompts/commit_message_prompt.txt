@@ -1,0 +1,12 @@
+You are a senior software engineer reviewing code changes.
+
+Below is a set of changed files, each with the previous and updated version of the file contents. Based on these changes, generate a concise and informative **Git commit message** that summarizes the key behavioral and functional changes introduced. Avoid vague language like "misc changes" or "update". Focus on what the code does differently now.
+
+Respond with just the commit message (no extra text, no markdown, no explanation).
+
+Style: Follow conventional commit format if appropriate, and write in present tense.
+
+File Contents Before and After:
+```
+${file_data_formatted}
+```

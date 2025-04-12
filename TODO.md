@@ -20,14 +20,15 @@ this is bootstrapped alternative to github ticketing / jira board
   - [x] integrate functionality with `gcpull` CLI
   - [x] create `prompts/pull_summary.txt` template prompt for `gcpull` LLM call.
   - [] Add git status, git diff doesnt account for untracked files
-
+  - [x] Add git commit
+ 
 - [ ] 2. Retrieval of files for context in prompting template
 
-  - [ ] currently only using `basic_PR_template.txt` for prompting
-  - [-] will need context from `git diff` output for entire files that were changed
-  - [ ] meaning, we only pass into the LLM input the `git diff` output and the prompt template
-    - [ ] `git diff` is not enough context for the input
-    - [-] need to retrieve info on the whole file for all files modified
+  - [x] currently only using `basic_PR_template.txt` for prompting
+  - [x] will need context from `git diff` output for entire files that were changed
+  - [x] meaning, we only pass into the LLM input the `git diff` output and the prompt template
+    - [x] `git diff` is not enough context for the input
+    - [x] need to retrieve info on the whole file for all files modified
   - [ ] Must figure out how to structure this retrieval
     
 

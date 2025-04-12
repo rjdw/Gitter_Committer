@@ -10,7 +10,8 @@
   "activationEvents": [
     "onCommand:gitter-committer.helloWorld",
     "onCommand:gitter-committer.gcpc",
-    "onCommand:gitter-committer.gcpull"
+    "onCommand:gitter-committer.gcpull",
+    "onCommand:gitter-committer.gccommit"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -26,6 +27,10 @@
       {
         "command": "gitter-committer.gcpull",
         "title": "gcpull"
+      },
+      {
+        "command": "gitter-committer.gccommit",
+        "title": "gccommit"
       }
     ]
   },

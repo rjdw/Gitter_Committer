@@ -45,3 +45,17 @@ def summarize_diff_gemini(diff_text, file_data_formatted):
     # print(response.__dict__.keys())
     return response.text
 
+def generate_commit_message_gemini(diff_text, file_data_formatted):
+    template = load_prompt_template("commit_message_prompt.txt")   
+    filled_prompt = template.substitute(
+        git_diff=diff_text,
+        file_data_formatted=file_data_formatted
+    )
+    client = genai.Client(api_key=GEMINI_API_KEY)
+
+    content = [filled_prompt]
+    response = client.models.generate_content(
+        model="gemini-2.0-flash", contents=content
+    )
+    # print(response.__dict__.keys())
+    return response.text
