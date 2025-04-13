@@ -10,7 +10,7 @@ def main(model):
     """Generate a behavioral summary of the git diff using the selected LLM."""
     diff_text = get_git_diff_gcpull()
     if not diff_text.strip():
-        click.secho("No diff found.", fg="yellow")
+        click.secho("No pull diff found.", fg="yellow")
         return
 
     changed_files = collections.defaultdict(list)

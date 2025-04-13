@@ -11,7 +11,10 @@ def main(staged, model):
     """Generate commit message using the selected LLM."""
     diff_text = get_git_diff_gcpc(staged=staged)
     if not diff_text.strip():
-        click.secho("No diff found.", fg="yellow")
+        if staged:
+            click.secho("No staged changes found.", fg="yellow")
+        else:
+            click.secho("No diff found.", fg="yellow")
         return
     
     changed_files = collections.defaultdict(list)

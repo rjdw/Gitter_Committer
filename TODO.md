@@ -14,6 +14,10 @@ this is bootstrapped alternative to github ticketing / jira board
 
 ### General
 
+- [ ] 0.5 We might want to refactor our CLI commands to something like `gc pull` and `gc pc` instead of all one word
+  - [ ] This seems more like `gc` CLI package, instead of a bunch of standalone commands
+  - [ ] kinda like `git pull`, `git clone`, etc...
+
 - [ ] 1. Add functionality for pull update summary.
 
   - [x] `git diff HEAD@{1} HEAD` functionality

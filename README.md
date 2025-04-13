@@ -80,8 +80,9 @@ this means we are private - no company security risk. We can run on no internet.
      - `OPENAI_API_KEY=your-key-here`
      - `GENAI_API_KEY=your-key-here`
    - Option 2: set the API key, `export OPENAI_API_KEY=your-key-here`
-8. Run code with `python src/gcpc.py (--staged)`
+8. depricated ~~Run code with `python src/gcpc.py (--staged)`~~
 9. `pip install -e .` for editable mode installation of `gcpc` and other CLI tools for dev.
+10. Run commands from CLI (`gcpc`, `gcpull`, `gccommit`, etc)
 
 ## Extension Setup
 
