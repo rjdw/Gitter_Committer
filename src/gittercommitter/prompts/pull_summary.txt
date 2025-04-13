@@ -10,3 +10,8 @@ Avoid unnecessary repetition of file paths or syntax details. The goal is to giv
 ```
 ${git_diff}
 ```
+
+File Contents Before and After:
+```
+${file_data_formatted}
+```

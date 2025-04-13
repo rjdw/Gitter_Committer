@@ -23,6 +23,7 @@ dependencies = [
 [project.scripts]
 gcpc = "gittercommitter.gcpc:main"
 gcpull = "gittercommitter.gcpull:main"
+gccommit = "gittercommitter.gccommit:main"
 # gcupdate = "gittercommitter.gcupdate:main"
 
 [tool.setuptools]

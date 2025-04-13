@@ -4,9 +4,11 @@ cachetools==5.5.2
 certifi==2025.1.31
 charset-normalizer==3.4.1
 click==8.1.8
+colorama==0.4.6
 distro==1.9.0
 gitdb==4.0.12
 GitPython==3.1.44
+-e git+https://github.com/rjdw/Gitter_Committer.git@17f5fb809686309db281b8193af8d8398f689ca7#egg=gittercommitter
 google-auth==2.38.0
 google-genai==1.9.0
 h11==0.14.0
@@ -19,6 +21,7 @@ pyasn1==0.6.1
 pyasn1_modules==0.4.2
 pydantic==2.11.2
 pydantic_core==2.33.1
+python-dotenv==1.1.0
 requests==2.32.3
 rsa==4.9
 smmap==5.0.2

@@ -77,6 +77,15 @@ this means we are private - no company security risk. We can run on no internet.
 7. Run code with `python src/gittercommitter.py (--staged)`
 8. `pip install -e .` for editable mode installation of `gcpc` and other CLI tools for dev.
 
+# Extension Setup
+1. cd extension/
+2. npm install
+3. code .
+2. be on extension.js file
+3. Launch Extension Development Host (F5)
+4. Press Ctrl+Shift+P
+5. Type command (gcpc, gcpull)
+
 ## Trying to beat
 
 https://windsurf.com/forge

@@ -19,14 +19,16 @@ this is bootstrapped alternative to github ticketing / jira board
   - [x] `git diff HEAD@{1} HEAD` functionality
   - [x] integrate functionality with `gcpull` CLI
   - [x] create `prompts/pull_summary.txt` template prompt for `gcpull` LLM call.
-
+  - [] Add git status, git diff doesnt account for untracked files
+  - [x] Add git commit
+ 
 - [ ] 2. Retrieval of files for context in prompting template
 
-  - [ ] currently only using `basic_PR_template.txt` for prompting
-  - [ ] will need context from `git diff` output for entire files that were changed
-  - [ ] meaning, we only pass into the LLM input the `git diff` output and the prompt template
-    - [ ] `git diff` is not enough context for the input
-    - [ ] need to retrieve info on the whole file for all files modified
+  - [x] currently only using `basic_PR_template.txt` for prompting
+  - [x] will need context from `git diff` output for entire files that were changed
+  - [x] meaning, we only pass into the LLM input the `git diff` output and the prompt template
+    - [x] `git diff` is not enough context for the input
+    - [x] need to retrieve info on the whole file for all files modified
   - [ ] Must figure out how to structure this retrieval
     
 
@@ -43,11 +45,13 @@ this is bootstrapped alternative to github ticketing / jira board
 
 - [-] 4. VSCode extension using `python src/gittercommitter.py (--staged)` CLI command
 
-  - [] need to figure out how to write VSCode extension
-    - [ ] this will be in Node.js probably
-  - [ ] Two ways
+  - [x] need to figure out how to write VSCode extension
+    - [x] this will be in Node.js probably
+  - [1] Two ways
     1.  VSCode hosts CLI tool as subprocess (easy to code)
     2.  VSCode POST for CLI local server (harder to code, but maybe migrate to because more room for future dev)
+  - [] polish this out to take user input from terminal 
+  - [] publish extension
 
 - [x] 5. CLI tool command aesthetics
   - UPDATE: Made `pyproject.toml` file for prettier CLI tool commands
@@ -60,7 +64,7 @@ this is bootstrapped alternative to github ticketing / jira board
   - [x] want to beautify this as a real CLI command `gcpc` (gitter committer pre commit)
     - [x] possibly make multiple CLI commands
       - [x] `gcpc` for pre commit LLM call (feature 1 in README)
-      - [ ] `gcpull` for merge notes (feature 2 in README)
+      - [x] `gcpull` for merge notes (feature 2 in README)
       - [ ] etc
 
 1. [ ] 6. Figure out external installation format

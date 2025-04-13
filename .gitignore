@@ -40,5 +40,9 @@ htmlcov/
 
 # Local environment overrides (optional)
 .envrc
-
 .env
+
+# Ignore extension's node_modules and build artifacts
+extension/node_modules/
+extension/out/
+extension/.vscode-test/
