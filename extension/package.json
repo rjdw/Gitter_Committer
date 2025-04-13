@@ -4,9 +4,11 @@
   "description": "CLI tool for AI precommit hook and pull code update changelogs",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.99.0"
+    "vscode": "^1.0.0"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [
     "onCommand:gitter-committer.helloWorld",
     "onCommand:gitter-committer.gcpc",

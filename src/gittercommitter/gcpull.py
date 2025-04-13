@@ -34,7 +34,7 @@ def main(model):
         # summary = summarize_diff_openai(diff_text)
     elif model == 'gemini':
         # print('gemini')
-        summary = summarize_diff_gemini(diff_text)
+        summary = summarize_diff_gemini(diff_text, file_data_formatted=file_data_formatted)
         click.secho(summary, fg="green")
 
     # click.secho(summary, fg="green")
