@@ -59,8 +59,9 @@ this can also be chatbot bc of LLM
 ### Feature 3
 
 Codeium forge is all on chrome extension -> cloud inference.
+Company has to purchase industry version to host the inference data on private server or something.
 
-ours is CLI so its local -> local inference
+Ours has options for local inference
 this means we are private - no company security risk. We can run on no internet. So we don’t need to save any of the code input to the LLM. Whereas, most companies probably will not allow for devs to use codeium forge bc its online.
 
 ## Setup
@@ -69,17 +70,18 @@ this means we are private - no company security risk. We can run on no internet.
 2. Ensure you're using `Python 3.13.1` locally for venv.
    - can use something like `pyenv` to make sure you are on this version.
 3. `python -m venv venv` make virtual dev environment for Python.
-4. `pip install -r requirements.txt`
-5. Add llama.cpp installation guide here
+4. `source ./venv/bin/activate`
+5. `pip install -r requirements.txt`
+6. Add llama.cpp installation guide here
    - need installation for LLMs
-6. If using OpenAI API or Gemini go make an API key online
+7. If using OpenAI API or Gemini go make an API key online
    - Option 1: Make .env file
      - `touch .env`
      - `OPENAI_API_KEY=your-key-here`
      - `GENAI_API_KEY=your-key-here`
    - Option 2: set the API key, `export OPENAI_API_KEY=your-key-here`
-7. Run code with `python src/gcpc.py (--staged)`
-8. `pip install -e .` for editable mode installation of `gcpc` and other CLI tools for dev.
+8. Run code with `python src/gcpc.py (--staged)`
+9. `pip install -e .` for editable mode installation of `gcpc` and other CLI tools for dev.
 
 ## Extension Setup
 
@@ -91,8 +93,11 @@ this means we are private - no company security risk. We can run on no internet.
 6. Open VSCode Command Palette.
    - Windows: Ctrl+Shift+P
    - Mac: Cmd+Shift+P
+
+**ISSUE HERE, working on it**  
 7. Type command (gcpc, gcpull)
-   - Remember you need to have installed these commands via `pip install -e .` prior to trying this.
+
+- Remember you need to have installed these commands via `pip install -e .` prior to trying this.
 
 ## Trying to beat
 
