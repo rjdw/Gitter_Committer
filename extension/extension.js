@@ -1,5 +1,10 @@
 const vscode = require("vscode");
 
+//for dev {
+const fs = require('fs');
+const path = require('path');
+//for dev }
+
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -23,10 +28,37 @@ function activate(context) {
         placeHolder: "--staged --model gemini",
         prompt: "Enter custom flags for gcpc",
       });
-      const command = `gcpc ${userInput || "--staged --model gemini"}`;
+
+      // for development purposes start
+      // Get current workspace root
+      const workspaceFolders = vscode.workspace.workspaceFolders;
+      const projectRoot = path.resolve(__dirname, '..');
+
+      // fallback for testing
+      console.log("Project root:", projectRoot);
+      // Determine platform and venv activation path
+      const isWindows = process.platform === 'win32';
+
+      const venvActivation = isWindows
+        ? path.join(projectRoot, 'venv', 'Scripts', 'activate') // Windows
+        : path.join(projectRoot, 'venv', 'bin', 'activate');    // macOS/Linux
+
       const terminal = vscode.window.createTerminal("GitterCommitter");
       terminal.show();
-      terminal.sendText(command);
+
+      if (fs.existsSync(venvActivation)) {
+        console.log("Detected venv. Activating:", venvActivation);
+        
+        const activateCommand = isWindows
+          ? `${venvActivation} && gcpc ${userInput || "--staged --model gemini"}`
+          : `source ${venvActivation} && gcpc ${userInput || "--staged --model gemini"}`;
+        
+        terminal.sendText(activateCommand);
+      } else {
+        console.log("No venv detected. Falling back to gcpc from $PATH.");
+        const command = `gcpc ${userInput || "--staged --model gemini"}`;
+        terminal.sendText(command);
+      }
     }
   );
   context.subscriptions.push(disposable2);
